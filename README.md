@@ -1,4 +1,4 @@
-# Text2SQL: Transform Natural Language to SQL
+# [Text2SQL](https://text2sql-ai.streamlit.app/): Transform Natural Language to SQL
 
 Text2SQL is an open-source project designed to leverage the power of language models in order to convert natural language into SQL queries. 
 
@@ -7,6 +7,8 @@ At its core, Text2SQL utilizes the [LangChain framework](https://python.langchai
 The primary objective of Text2SQL is to provide a blueprint for transforming human text into SQL queries. As such, our project is an ideal starting point for anyone interested in exploring the intersection of natural language processing and database querying. 
 
 Additionally, Text2SQL is designed with flexibility in mind. It can be adjusted to work with any SQL dialect that's supported by SQLAlchemy, making it compatible with a wide range of databases, including MS SQL, MySQL, MariaDB, PostgreSQL, Oracle SQL, Databricks, and SQLite.
+
+#### [Live DEMO](https://text2sql-ai.streamlit.app/)
 
 ## 🏃‍♀️ How to Run It Locally
 
