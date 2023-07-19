@@ -32,6 +32,9 @@ def main():
 
     sidebar()
     
+    with st.expander("GETTING STARTED"):
+        st.write((Path(__file__).parent/"README.md").read_text())   
+    
     openai_api_key = st.session_state.get("OPENAI_API_KEY")
     if not openai_api_key:
         st.warning(
@@ -39,10 +42,6 @@ def main():
             " https://platform.openai.com/account/api-keys."
         )
         return
-    
-    with st.expander("GETTING STARTED"):
-       st.write((Path(__file__).parent/"README.md").read_text())
-   
            
     llm = ChatOpenAI(temperature=0.0, openai_api_key=openai_api_key, verbose=True)
     
