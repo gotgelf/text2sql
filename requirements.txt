@@ -1,0 +1,4 @@
+# Core
+streamlit
+langchain
+openai
