@@ -32,17 +32,18 @@ def main():
 
     sidebar()
     
-    with st.expander("GETTING STARTED"):
-       st.write((Path(__file__).parent/"README.md").read_text())
-   
-        
     openai_api_key = st.session_state.get("OPENAI_API_KEY")
     if not openai_api_key:
         st.warning(
             "Enter your OpenAI API key in the sidebar. You can obtain your API key by visiting this link:"
             " https://platform.openai.com/account/api-keys."
         )
+        return
     
+    with st.expander("GETTING STARTED"):
+       st.write((Path(__file__).parent/"README.md").read_text())
+   
+           
     llm = ChatOpenAI(temperature=0.0, openai_api_key=openai_api_key, verbose=True)
     
     db = SQLDatabase.from_uri(
